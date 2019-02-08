@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar color="primary">
+      <ion-title>{{item.nombre}} {{item.apellidos}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-item>
+      <ion-label>Nombre</ion-label>
+      <ion-input [(ngModel)]="item.nombre" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Apellidos</ion-label>
+      <ion-input [(ngModel)]="item.apellidos" type="text"></ion-input>
+    </ion-item> 
+    <ion-item>
+      <ion-label>Direccion</ion-label>
+      <ion-input [(ngModel)]="item.direccion" type="text" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Fecha de Nacimiento</ion-label>
+      <ion-input [(ngModel)]="item.fechaNacimiento" type="text" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Telefono</ion-label>
+      <ion-input [(ngModel)]="item.telefono" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input [(ngModel)]="item.email" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Curso</ion-label>
+      <ion-input [(ngModel)]="item.curso" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Materias</ion-label>
+      <ion-input [(ngModel)]="item.materias" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Datos Tutor</ion-label>
+      <ion-input [(ngModel)]="item.datosTutor" type="text"></ion-input>
+    </ion-item>
+    <button ion-button block clear (click)="guardarItem(item)">Guardar</button>
+    <button ion-button block clear color="danger" (click)="borrarItem(item)">Eliminar</button>
+  </ion-content>
+  

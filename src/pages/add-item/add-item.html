@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Añadir Alumno</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-item>
+      <ion-label>Nombre</ion-label>
+      <ion-input [(ngModel)]="item.nombre" placeholder="Luna"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Apellidos</ion-label>
+      <ion-input [(ngModel)]="item.apellidos" placeholder="Lovegood"></ion-input>
+    </ion-item> 
+    <ion-item>
+      <ion-label>Direccion</ion-label>
+      <ion-input [(ngModel)]="item.direccion" placeholder="Hogwarts"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Fecha de Nacimiento</ion-label>
+      <ion-input [(ngModel)]="item.fechaNacimiento" placeholder="13/02/1981"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Telefono</ion-label>
+      <ion-input [(ngModel)]="item.telefono" placeholder="123456789"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input [(ngModel)]="item.email" placeholder="lunatica@ravenclaw.com"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Curso</ion-label>
+      <ion-input [(ngModel)]="item.curso" placeholder="Curso3"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Materias</ion-label>
+      <ion-input [(ngModel)]="item.materias" placeholder="Cuidado de Criaturas Mágicas, Astronomia"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Datos Tutor</ion-label>
+      <ion-input [(ngModel)]="item.datosTutor" placeholder="Xenophilius Lovegood 987654321"></ion-input>
+    </ion-item>
+  
+    <button ion-button block clear (click)="addItem(item)">Añadir</button>
+  </ion-content>

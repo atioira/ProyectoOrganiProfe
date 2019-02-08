@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Enviar Email</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <div padding>
+      <h3>Nuevo mensaje</h3>
+      <ion-item>
+          <ion-label color="primary" stacked>Destinatarios</ion-label>
+          <ion-input [(ngModel)]="to" type="email" multiple="true" required="true" pattern="email" placeholder="Para"></ion-input>
+        </ion-item>
+      <ion-item>
+        <ion-label color="primary" stacked>Asunto</ion-label>
+        <ion-input [(ngModel)]="subject" type="text" placeholder="Asunto"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label color="primary" stacked></ion-label>
+          <ion-input [(ngModel)]="body" type="text" style="padding-bottom:100px"></ion-input>
+        </ion-item>
+      <button ion-button block (click)="send()">send</button>
+    </div>
+    </ion-content>
+    

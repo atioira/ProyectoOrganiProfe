@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>Lista Alumnos</ion-title>
+        <ion-buttons end>
+          <button ion-button
+                  navPush="AddItemPage">
+            <ion-icon name="add"></ion-icon>
+          </button>
+        </ion-buttons>
+      </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+      <ion-item color="light" *ngFor="let item of listaFicha | async"
+                (click)="selectFichaItem(item)">
+        <h2>Nombre: {{item.nombre}} </h2>
+        <h3>Apellidos: {{item.apellidos}}</h3>
+        <h3>Curso: {{item.curso}}</h3>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  
